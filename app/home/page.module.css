@@ -1,0 +1,803 @@
+.home {
+  min-height: 100vh;
+  background-color: white;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: white;
+}
+
+.gradientOrb1 {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 384px;
+  height: 384px;
+  background: linear-gradient(to bottom right, rgba(216, 180, 254, 0.4), rgba(191, 219, 254, 0.3));
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: pulseSlow 8s ease-in-out infinite;
+}
+
+.gradientOrb2 {
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(to bottom right, rgba(251, 207, 232, 0.35), rgba(216, 180, 254, 0.3));
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: floatSlow 10s ease-in-out infinite;
+}
+
+.gradientOrb3 {
+  position: absolute;
+  top: 33.333%;
+  right: 33.333%;
+  width: 288px;
+  height: 288px;
+  background: linear-gradient(to bottom right, rgba(191, 219, 254, 0.25), rgba(221, 214, 254, 0.2));
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: floatReverse 12s ease-in-out infinite;
+}
+
+.dotPattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.horizontalLine1 {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(216, 180, 254, 0.6), transparent);
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.horizontalLine2 {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(191, 219, 254, 0.5), transparent);
+  animation: floatReverse 10s ease-in-out infinite;
+}
+
+.horizontalLine3 {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(251, 207, 232, 0.5), transparent);
+  animation: floatSlow 9s ease-in-out infinite;
+}
+
+.horizontalLine4 {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(216, 180, 254, 0.55), transparent);
+  animation: floatReverse 11s ease-in-out infinite;
+}
+
+.verticalLine1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(216, 180, 254, 0.4), transparent);
+  animation: floatVertical 7s ease-in-out infinite;
+}
+
+.verticalLine2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 45%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(191, 219, 254, 0.35), transparent);
+  animation: floatVerticalReverse 9s ease-in-out infinite;
+}
+
+.verticalLine3 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(251, 207, 232, 0.35), transparent);
+  animation: floatVertical 8s ease-in-out infinite;
+}
+
+.diagonalLine1 {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  width: 192px;
+  height: 1px;
+  background: linear-gradient(to right, rgba(192, 132, 252, 0.5), transparent);
+  transform: rotate(45deg);
+  animation: floatSlow 10s ease-in-out infinite;
+}
+
+.diagonalLine2 {
+  position: absolute;
+  bottom: 25%;
+  right: 8%;
+  width: 224px;
+  height: 1px;
+  background: linear-gradient(to left, rgba(244, 114, 182, 0.45), transparent);
+  transform: rotate(-45deg);
+  animation: floatReverse 11s ease-in-out infinite;
+}
+
+.heroContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 20;
+}
+
+.heroContent {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.textContent {
+  margin-bottom: 2rem;
+}
+
+.heroTitle {
+  font-size: 3.75rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-bottom: 1.5rem;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  color: black;
+  max-width: 768px;
+  margin: 0 auto 1rem;
+  line-height: 1.75;
+  text-wrap: balance;
+}
+
+.heroDate {
+  font-size: 1.125rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.ctaWrapper {
+  padding-top: 2rem;
+}
+
+.registerButton {
+  background-color: black !important;
+  border: none;
+  height: 48px;
+  padding: 0 2rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.registerButton:hover {
+  background-color: #1f2937 !important;
+}
+
+/* About Section */
+.aboutSection {
+  padding: 8rem 0;
+  position: relative;
+  background-color: white;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.headerContent {
+  max-width: 896px;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.aboutTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  text-wrap: balance;
+  line-height: 1.2;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.aboutDescription {
+  font-size: 1.125rem;
+  color: black;
+  text-wrap: balance;
+  line-height: 1.75;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 0.75rem;
+}
+
+.featureDescription {
+  color: black;
+  line-height: 1.75;
+}
+
+/* Agenda Section */
+.agendaSection {
+  padding: 8rem 0 10rem;
+  background: white;
+}
+
+.agendaHeader {
+  max-width: 56rem;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.agendaTitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.agendaSubtitle {
+  font-size: 1.25rem;
+  color: black;
+}
+
+.agendaList {
+  max-width: 56rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.agendaItem {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background: white;
+}
+
+.highlight {
+  background: linear-gradient(to bottom right, #faf5ff, #fce7f3);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.timeLabel {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+  font-size: 0.875rem;
+  font-weight: bold;
+  border-radius: 9999px;
+  width: fit-content;
+}
+
+.itemTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.itemDescription {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.speakersLabel {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.speakersList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.speakerCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #f3f4f6;
+  transition: border-color 0.2s;
+}
+
+.speakerCard:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.speakerInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.speakerName {
+  color: black;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.speakerRole {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.openSession {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.875rem;
+}
+
+.note {
+  margin-top: 4rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  background: #f9fafb;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.note p {
+  color: black;
+  line-height: 1.6;
+}
+
+.noteBold {
+  font-weight: bold;
+}
+
+/* Prizes Section */
+.prizesSection {
+  padding: 8rem 0 10rem;
+  background: white;
+}
+
+.prizesHeader {
+  max-width: 56rem;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.prizesTitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.prizesSubtitle {
+  font-size: 1.125rem;
+  color: black;
+}
+
+.prizesGrid {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.prizeCard {
+  padding: 2.5rem;
+  background: linear-gradient(to bottom right, #faf5ff, #fce7f3);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.resourceCard {
+  background: linear-gradient(to bottom right, #eff6ff, #faf5ff);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.prizeDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.prizeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.75rem;
+}
+
+.prizeLabel {
+  font-weight: 600;
+  color: black;
+}
+
+.prizeAmount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #8b5cf6;
+}
+
+.trackAwards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trackLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: black;
+}
+
+.prizeTotal {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.totalText {
+  font-weight: bold;
+  color: black;
+}
+
+.resourceList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resourceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.75rem;
+}
+
+.bullet {
+  color: #8b5cf6;
+  margin-top: 0.25rem;
+}
+
+.resourceTitle {
+  font-weight: 500;
+  color: black;
+}
+
+.resourceDesc {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.resourceText {
+  color: black;
+}
+
+.resourceNote {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.noteText {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.875rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 8rem 0 10rem;
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+.gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(243, 232, 255, 0.4), rgba(250, 245, 255, 0.2), transparent);
+}
+
+.dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, oklch(0.85 0 0) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+}
+
+.bottomLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.6), transparent);
+  opacity: 0.6;
+}
+
+.ctaContent {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.ctaTitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: black;
+}
+
+.ctaSubtitle {
+  font-size: 1.25rem;
+  color: black;
+  line-height: 1.6;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.buttonWrapper {
+  padding-top: 1.5rem;
+}
+
+.ctaButton {
+  background: black !important;
+  border: none !important;
+  height: 3rem !important;
+  padding: 0 2rem !important;
+  border-radius: 9999px !important;
+  font-size: 1rem !important;
+}
+
+.ctaButton:hover {
+  background: #374151 !important;
+}
+
+.ctaNote {
+  font-size: 0.875rem;
+  color: black;
+}
+
+/* Animations */
+@keyframes pulseSlow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatReverse {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes floatVertical {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes floatVerticalReverse {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 4.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.875rem;
+  }
+
+  .heroDescription {
+    font-size: 1.5rem;
+  }
+
+  .heroDate {
+    font-size: 1.25rem;
+  }
+
+  .aboutSection {
+    padding: 10rem 0;
+  }
+
+  .aboutTitle {
+    font-size: 3.75rem;
+  }
+
+  .aboutDescription {
+    font-size: 1.25rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featureTitle {
+    font-size: 1.875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutTitle {
+    font-size: 4.5rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .agendaItem {
+    grid-template-columns: 1fr;
+  }
+
+  .agendaTitle {
+    font-size: 2.5rem;
+  }
+
+  .prizesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .prizesTitle {
+    font-size: 2.5rem;
+  }
+
+  .prizeAmount {
+    font-size: 1.25rem;
+  }
+
+  .ctaTitle {
+    font-size: 2.5rem;
+  }
+
+  .ctaSubtitle {
+    font-size: 1.125rem;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

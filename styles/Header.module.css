@@ -1,0 +1,142 @@
+/* app/components/Header/styles.module.css */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.banner {
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  color: white;
+  padding: 0.75rem 0;
+}
+
+.bannerContent {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.newsTag {
+  background: white;
+  color: #8b5cf6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.bannerLink {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.bannerLink:hover {
+  text-decoration: none;
+}
+
+.navContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: black;
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.logoText {
+  letter-spacing: 0.05em;
+}
+
+.desktopNav {
+  display: none;
+  gap: 2rem;
+}
+
+.navLink {
+  color: black;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #8b5cf6;
+}
+
+.mobileMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menuIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: black;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.mobileNavLink {
+  padding: 0.75rem 0;
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobileNavLink:hover {
+  color: #8b5cf6;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .mobileMenuButton {
+    display: none;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+}
