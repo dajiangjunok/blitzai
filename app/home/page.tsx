@@ -8,7 +8,7 @@ import styles from "./page.module.css"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 
-export function Home() {
+export default function Home() {
     const [isOpen, setIsOpen] = useState(false)
 
     const navItems = [
@@ -154,7 +154,7 @@ export function Home() {
                 <div className={styles.heroContainer}>
                     <div className={styles.heroContent}>
                         <div className={styles.textContent}>
-                            <h1 className={styles.heroTitle}>Monad Blitz Pro</h1>
+                            <h1 className={styles.heroTitle}>Rebel in Paradise</h1>
                             <p className={styles.heroSubtitle}>AI HACKATHON</p>
                             <p className={styles.heroDescription}>
                                 Exploring Native Infrastructure, Products and Markets in the Age of Agents
