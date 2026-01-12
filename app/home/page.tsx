@@ -2,6 +2,7 @@
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import Image from 'next/image';
 import { Button } from "antd"
 import { Avatar } from "antd"
 import styles from "./page.module.css"
@@ -135,41 +136,24 @@ export default function Home() {
         <div className={styles.home}>
             {/* Navigation */}
             <Header />
-            {/* Hero Section */}
             <section id="home" className={styles.heroSection}>
-                <div className={styles.gradientOrb1} />
-                <div className={styles.gradientOrb2} />
-                <div className={styles.gradientOrb3} />
-                <div className={styles.dotPattern} />
-                <div className={styles.horizontalLine1} />
-                <div className={styles.horizontalLine2} />
-                <div className={styles.horizontalLine3} />
-                <div className={styles.horizontalLine4} />
-                <div className={styles.verticalLine1} />
-                <div className={styles.verticalLine2} />
-                <div className={styles.verticalLine3} />
-                <div className={styles.diagonalLine1} />
-                <div className={styles.diagonalLine2} />
-
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroContent}>
-                        <div className={styles.textContent}>
-                            <h1 className={styles.heroTitle}>Rebel in Paradise</h1>
-                            <p className={styles.heroSubtitle}>AI HACKATHON</p>
-                            <p className={styles.heroDescription}>
-                                Exploring Native Infrastructure, Products and Markets in the Age of Agents
-                            </p>
-                            {/* <p className={styles.heroDate}>Jan - Feb 2026 · Monad Blitz Pro</p> */}
-                        </div>
-                        <div className={styles.ctaWrapper}>
-                            <Button type="primary" size="large" className={styles.registerButton}>
-                                Register Now
-                            </Button>
-                        </div>
-                    </div>
+                {/* 背景图片容器 - 使用 next/image */}
+                <div className={styles.heroImageContainer}>
+                    <Image
+                        src="/intro.png"
+                        alt="Rebel in Paradise AI Hackathon Background"
+                        fill
+                        priority
+                        quality={85}
+                        className={styles.heroImage}
+                        sizes="100vw"
+                        style={{
+                            objectFit: 'cover',
+                            objectPosition: 'center'
+                        }}
+                    />
                 </div>
             </section>
-
             {/* About Section */}
             <section id="about" className={styles.aboutSection}>
                 <div className={styles.container}>

@@ -1,6 +1,9 @@
+/* Updated to dark anime theme with grid background */
 .home {
   min-height: 100vh;
-  background-color: white;
+  background-color: #0f0f0f;
+  position: relative;
+  background: linear-gradient(to bottom, #0f0f0f 0%, #0f0a15 30%, #0a0a0f 70%, #070710 100%);
 }
 
 /* Hero Section */
@@ -11,7 +14,106 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: white;
+  background: linear-gradient(to bottom, #0f0f0f, #0f0a15);
+}
+
+/* Added background anime character styles positioned on right side */
+.animeCharBgBlue {
+  position: absolute;
+  bottom: 0;
+  right: 20%;
+  width: 200px;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+.animeCharBgPurple {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  width: 200px;
+  height: auto;
+  z-index: 5;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+/* Added Partners section styles */
+.partnersSection {
+  margin-top: 6rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.partnersContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(15, 10, 21, 0.6);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(168, 85, 247, 0.2);
+}
+
+.animeCharFrame {
+  flex-shrink: 0;
+  width: 200px;
+  padding: 1rem;
+  background: rgba(15, 10, 21, 0.8);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animeCharInFrame {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.75rem;
+}
+
+.partnersContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.partnerRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.partnerLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.partnerLogos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.partnerLogo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
 }
 
 .gradientOrb1 {
@@ -20,9 +122,9 @@
   left: 25%;
   width: 384px;
   height: 384px;
-  background: linear-gradient(to bottom right, rgba(216, 180, 254, 0.4), rgba(191, 219, 254, 0.3));
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.3), rgba(139, 92, 246, 0.2), transparent);
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(80px);
   animation: pulseSlow 8s ease-in-out infinite;
 }
 
@@ -32,9 +134,9 @@
   right: 25%;
   width: 320px;
   height: 320px;
-  background: linear-gradient(to bottom right, rgba(251, 207, 232, 0.35), rgba(216, 180, 254, 0.3));
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.3), rgba(219, 39, 119, 0.2), transparent);
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(80px);
   animation: floatSlow 10s ease-in-out infinite;
 }
 
@@ -44,17 +146,41 @@
   right: 33.333%;
   width: 288px;
   height: 288px;
-  background: linear-gradient(to bottom right, rgba(191, 219, 254, 0.25), rgba(221, 214, 254, 0.2));
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.15), transparent);
   border-radius: 50%;
-  filter: blur(60px);
+  filter: blur(80px);
   animation: floatReverse 12s ease-in-out infinite;
 }
 
-.dotPattern {
+.gridPattern {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(139, 92, 246, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.08) 1px, transparent 1px);
   background-size: 40px 40px;
+  z-index: 1;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 60% 70%, white, transparent), radial-gradient(1px 1px at 50% 50%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent), radial-gradient(2px 2px at 90% 60%, white, transparent),
+    radial-gradient(1px 1px at 33% 90%, white, transparent), radial-gradient(1px 1px at 15% 75%, white, transparent);
+  background-size: 200% 200%;
+  animation: sparkle 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .horizontalLine1 {
@@ -63,8 +189,9 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(216, 180, 254, 0.6), transparent);
+  background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.8), transparent);
   animation: floatSlow 8s ease-in-out infinite;
+  z-index: 3;
 }
 
 .horizontalLine2 {
@@ -73,8 +200,9 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(191, 219, 254, 0.5), transparent);
+  background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.6), transparent);
   animation: floatReverse 10s ease-in-out infinite;
+  z-index: 3;
 }
 
 .horizontalLine3 {
@@ -83,8 +211,9 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(251, 207, 232, 0.5), transparent);
+  background: linear-gradient(to right, transparent, rgba(236, 72, 153, 0.6), transparent);
   animation: floatSlow 9s ease-in-out infinite;
+  z-index: 3;
 }
 
 .horizontalLine4 {
@@ -93,8 +222,9 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(216, 180, 254, 0.55), transparent);
+  background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.7), transparent);
   animation: floatReverse 11s ease-in-out infinite;
+  z-index: 3;
 }
 
 .verticalLine1 {
@@ -103,8 +233,9 @@
   bottom: 0;
   left: 15%;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(216, 180, 254, 0.4), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(168, 85, 247, 0.5), transparent);
   animation: floatVertical 7s ease-in-out infinite;
+  z-index: 3;
 }
 
 .verticalLine2 {
@@ -113,8 +244,9 @@
   bottom: 0;
   left: 45%;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(191, 219, 254, 0.35), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.4), transparent);
   animation: floatVerticalReverse 9s ease-in-out infinite;
+  z-index: 3;
 }
 
 .verticalLine3 {
@@ -123,8 +255,9 @@
   bottom: 0;
   right: 20%;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(251, 207, 232, 0.35), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(236, 72, 153, 0.4), transparent);
   animation: floatVertical 8s ease-in-out infinite;
+  z-index: 3;
 }
 
 .diagonalLine1 {
@@ -133,9 +266,10 @@
   left: 5%;
   width: 192px;
   height: 1px;
-  background: linear-gradient(to right, rgba(192, 132, 252, 0.5), transparent);
+  background: linear-gradient(to right, rgba(168, 85, 247, 0.6), transparent);
   transform: rotate(45deg);
   animation: floatSlow 10s ease-in-out infinite;
+  z-index: 3;
 }
 
 .diagonalLine2 {
@@ -144,9 +278,10 @@
   right: 8%;
   width: 224px;
   height: 1px;
-  background: linear-gradient(to left, rgba(244, 114, 182, 0.45), transparent);
+  background: linear-gradient(to left, rgba(236, 72, 153, 0.6), transparent);
   transform: rotate(-45deg);
   animation: floatReverse 11s ease-in-out infinite;
+  z-index: 3;
 }
 
 .heroContainer {
@@ -172,20 +307,22 @@
   font-size: 3.75rem;
   font-weight: 700;
   letter-spacing: -0.025em;
-  color: black;
+  color: white;
   margin-bottom: 1.5rem;
+  text-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
 }
 
 .heroSubtitle {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #7c3aed;
+  color: #a855f7;
   margin-bottom: 1.5rem;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
 }
 
 .heroDescription {
   font-size: 1.25rem;
-  color: black;
+  color: rgba(255, 255, 255, 0.9);
   max-width: 768px;
   margin: 0 auto 1rem;
   line-height: 1.75;
@@ -194,44 +331,34 @@
 
 .heroDate {
   font-size: 1.125rem;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.ctaWrapper {
-  padding-top: 2rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .registerButton {
-  background-color: black !important;
+  background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
   border: none;
   height: 48px;
   padding: 0 2rem;
   border-radius: 9999px;
   font-size: 1rem;
   font-weight: 500;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4);
 }
 
 .registerButton:hover {
-  background-color: #1f2937 !important;
+  background: linear-gradient(135deg, #7c3aed, #9333ea) !important;
+  box-shadow: 0 6px 30px rgba(168, 85, 247, 0.6);
+}
+
+.ctaWrapper {
+  padding-top: 2rem;
 }
 
 /* About Section */
 .aboutSection {
   padding: 8rem 0;
   position: relative;
-  background-color: white;
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.headerContent {
-  max-width: 896px;
-  margin: 0 auto 5rem;
-  text-align: center;
+  background: linear-gradient(to bottom, #0f0f0f, #0a0a0f);
 }
 
 .aboutTitle {
@@ -239,13 +366,13 @@
   font-weight: 500;
   text-wrap: balance;
   line-height: 1.2;
-  color: black;
+  color: white;
   margin-bottom: 1.5rem;
 }
 
 .aboutDescription {
   font-size: 1.125rem;
-  color: black;
+  color: rgba(255, 255, 255, 0.8);
   text-wrap: balance;
   line-height: 1.75;
   max-width: 768px;
@@ -254,60 +381,41 @@
 
 .featuresGrid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);  /* 改为4列 */
   gap: 2rem;
   max-width: 1152px;
   margin: 0 auto;
 }
 
-.featureCard {
-  text-align: center;
-  padding: 1.5rem;
-}
-
 .featureTitle {
   font-size: 1.5rem;
   font-weight: 700;
-  color: black;
+  color: #a855f7;
   margin-bottom: 0.75rem;
 }
 
 .featureDescription {
-  color: black;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.75;
 }
 
 /* Agenda Section */
 .agendaSection {
   padding: 8rem 0 10rem;
-  background: white;
-}
-
-.agendaHeader {
-  max-width: 56rem;
-  margin: 0 auto 5rem;
-  text-align: center;
+  background: #0a0a0f;
 }
 
 .agendaTitle {
   font-size: 3.5rem;
   font-weight: bold;
   line-height: 1.1;
-  color: black;
+  color: white;
   margin-bottom: 1.5rem;
 }
 
 .agendaSubtitle {
   font-size: 1.25rem;
-  color: black;
-}
-
-.agendaList {
-  max-width: 56rem;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .agendaItem {
@@ -316,62 +424,47 @@
   gap: 1.5rem;
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid #e5e7eb;
-  background: white;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: rgba(15, 10, 21, 0.6);
+  backdrop-filter: blur(10px);
 }
 
 .highlight {
-  background: linear-gradient(to bottom right, #faf5ff, #fce7f3);
-  border-color: rgba(139, 92, 246, 0.3);
-}
-
-.leftColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
 }
 
 .timeLabel {
   display: inline-block;
   padding: 0.25rem 1rem;
-  background: rgba(139, 92, 246, 0.1);
-  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
   font-size: 0.875rem;
   font-weight: bold;
   border-radius: 9999px;
   width: fit-content;
+  border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
 .itemTitle {
   font-size: 1.5rem;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 .itemDescription {
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
-}
-
-.rightColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .speakersLabel {
   font-size: 0.75rem;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
-
-.speakersList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
 .speakerCard {
@@ -379,30 +472,26 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem;
-  background: white;
+  background: rgba(15, 10, 21, 0.8);
   border-radius: 0.75rem;
-  border: 1px solid #f3f4f6;
-  transition: border-color 0.2s;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: all 0.2s;
 }
 
 .speakerCard:hover {
-  border-color: rgba(139, 92, 246, 0.3);
-}
-
-.speakerInfo {
-  flex: 1;
-  min-width: 0;
+  border-color: rgba(168, 85, 247, 0.5);
+  background: rgba(20, 15, 26, 0.9);
 }
 
 .speakerName {
-  color: black;
+  color: white;
   font-weight: 600;
   font-size: 0.875rem;
 }
 
 .speakerRole {
   font-size: 0.75rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .openSession {
@@ -410,7 +499,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.4);
   font-size: 0.875rem;
 }
 
@@ -420,85 +509,62 @@
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
-  background: #f9fafb;
+  background: rgba(139, 92, 246, 0.1);
   border-radius: 1rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
 .note p {
-  color: black;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
 }
 
 .noteBold {
   font-weight: bold;
+  color: #c4b5fd;
 }
 
 /* Prizes Section */
 .prizesSection {
   padding: 8rem 0 10rem;
-  background: white;
-}
-
-.prizesHeader {
-  max-width: 56rem;
-  margin: 0 auto 5rem;
-  text-align: center;
+  background: linear-gradient(to bottom, #0a0a0f, #0f0a15);
 }
 
 .prizesTitle {
   font-size: 3.5rem;
   font-weight: bold;
   line-height: 1.1;
-  color: black;
+  color: white;
   margin-bottom: 1.5rem;
 }
 
 .prizesSubtitle {
   font-size: 1.125rem;
-  color: black;
-}
-
-.prizesGrid {
-  max-width: 72rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .prizeCard {
   padding: 2.5rem;
-  background: linear-gradient(to bottom right, #faf5ff, #fce7f3);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(168, 85, 247, 0.1));
   border-radius: 1.5rem;
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .resourceCard {
-  background: linear-gradient(to bottom right, #eff6ff, #faf5ff);
-}
-
-.cardContent {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.1));
+  border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 .cardTitle {
   font-size: 1.875rem;
   font-weight: bold;
-  color: black;
+  color: white;
   margin-bottom: 0.5rem;
 }
 
 .cardDescription {
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.prizeDetails {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .prizeRow {
@@ -506,47 +572,37 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(15, 10, 21, 0.6);
   border-radius: 0.75rem;
+  border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
 .prizeLabel {
   font-weight: 600;
-  color: black;
+  color: white;
 }
 
 .prizeAmount {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #8b5cf6;
-}
-
-.trackAwards {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  color: #c4b5fd;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
 }
 
 .trackLabel {
   font-size: 0.875rem;
   font-weight: 500;
-  color: black;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .prizeTotal {
   padding-top: 1rem;
-  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  border-top: 1px solid rgba(139, 92, 246, 0.3);
 }
 
 .totalText {
   font-weight: bold;
-  color: black;
-}
-
-.resourceList {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  color: #c4b5fd;
 }
 
 .resourceItem {
@@ -554,36 +610,37 @@
   align-items: flex-start;
   gap: 0.75rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(15, 10, 21, 0.6);
   border-radius: 0.75rem;
+  border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 .bullet {
-  color: #8b5cf6;
+  color: #a78bfa;
   margin-top: 0.25rem;
 }
 
 .resourceTitle {
   font-weight: 500;
-  color: black;
+  color: white;
 }
 
 .resourceDesc {
   font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .resourceText {
-  color: black;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .resourceNote {
   padding-top: 1rem;
-  border-top: 1px solid rgba(139, 92, 246, 0.2);
+  border-top: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 .noteText {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.875rem;
 }
 
@@ -592,19 +649,19 @@
   padding: 8rem 0 10rem;
   position: relative;
   overflow: hidden;
-  background: white;
+  background: #0a0a0f;
 }
 
 .gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(243, 232, 255, 0.4), rgba(250, 245, 255, 0.2), transparent);
+  background: linear-gradient(to top, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.1), transparent);
 }
 
 .dots {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, oklch(0.85 0 0) 1px, transparent 1px);
+  background-image: radial-gradient(circle at 1px 1px, rgba(168, 85, 247, 0.3) 1px, transparent 1px);
   background-size: 40px 40px;
   opacity: 0.3;
 }
@@ -615,56 +672,43 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.6), transparent);
-  opacity: 0.6;
-}
-
-.ctaContent {
-  max-width: 56rem;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  position: relative;
-  z-index: 10;
+  background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.8), transparent);
+  opacity: 0.8;
 }
 
 .ctaTitle {
   font-size: 3.5rem;
   font-weight: bold;
   line-height: 1.1;
-  color: black;
+  color: white;
 }
 
 .ctaSubtitle {
   font-size: 1.25rem;
-  color: black;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   max-width: 42rem;
   margin: 0 auto;
 }
 
-.buttonWrapper {
-  padding-top: 1.5rem;
-}
-
 .ctaButton {
-  background: black !important;
+  background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
   border: none !important;
   height: 3rem !important;
   padding: 0 2rem !important;
   border-radius: 9999px !important;
   font-size: 1rem !important;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4) !important;
 }
 
 .ctaButton:hover {
-  background: #374151 !important;
+  background: linear-gradient(135deg, #7c3aed, #9333ea) !important;
+  box-shadow: 0 6px 30px rgba(168, 85, 247, 0.6) !important;
 }
 
 .ctaNote {
   font-size: 0.875rem;
-  color: black;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Animations */
@@ -718,6 +762,11 @@
   }
 }
 
+.accent {
+  color: #a855f7;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
 /* Responsive */
 @media (min-width: 768px) {
   .heroTitle {
@@ -768,6 +817,25 @@
 }
 
 @media (max-width: 768px) {
+  /* Hide background anime characters and adjust partners section for mobile */
+  .animeCharBgBlue,
+  .animeCharBgPurple {
+    display: none;
+  }
+
+  .partnersContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .animeCharFrame {
+    width: 150px;
+  }
+
+  .partnerLogos {
+    justify-content: center;
+  }
+
   .agendaItem {
     grid-template-columns: 1fr;
   }
@@ -800,4 +868,106 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.headerContent {
+  max-width: 896px;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.agendaHeader {
+  max-width: 56rem;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.agendaList {
+  max-width: 56rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.speakersList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.speakerInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.prizesHeader {
+  max-width: 56rem;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.prizesGrid {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.prizeDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.trackAwards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resourceList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ctaContent {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.buttonWrapper {
+  padding-top: 1.5rem;
 }
