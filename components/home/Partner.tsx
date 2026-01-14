@@ -25,11 +25,6 @@ export const Partner = () => {
   return (
     <section className={styles.partner}>
       <div className={styles.partnerArea}>
-        <div className={styles.hostGroup}>
-         <Image src="/home/logo/Co-host.png" width={600}  height={100} alt=''>
-         </Image>
-        </div>
-
         <div className={styles.partnerBlock}>
           <div className={styles.partnerCharacters} aria-hidden="true">
             <Image
@@ -37,6 +32,7 @@ export const Partner = () => {
               height={300}
               className={`${styles.partnerCharacter} ${styles.partnerCharacterLeft}`}
               src="/home/manga-girl/manga_girl_1.png"
+              sizes="(max-width: 900px) 120px, (max-width: 1200px) 22vw, 250px"
               alt=""
             />
             <Image
@@ -44,6 +40,7 @@ export const Partner = () => {
               height={300}
               className={`${styles.partnerCharacter} ${styles.partnerCharacterCenterLeft}`}
               src="/home/manga-girl/manga_girl_2.png"
+              sizes="(max-width: 900px) 110px, (max-width: 1200px) 18vw, 220px"
               alt=""
             />
             <Image
@@ -51,6 +48,7 @@ export const Partner = () => {
               height={300}
               className={`${styles.partnerCharacter} ${styles.partnerCharacterCenterRight}`}
               src="/home/manga-girl/manga_girl_4.png"
+              sizes="(max-width: 900px) 120px, (max-width: 1200px) 24vw, 310px"
               alt=""
             />
             <Image
@@ -58,6 +56,7 @@ export const Partner = () => {
               height={300}
               className={`${styles.partnerCharacter} ${styles.partnerCharacterRight}`}
               src="/home/manga-girl/manga_girl_3.png"
+              sizes="(max-width: 900px) 120px, (max-width: 1200px) 22vw, 250px"
               alt=""
             />
           </div>
@@ -71,6 +70,7 @@ export const Partner = () => {
                   height={40}
                   className={styles.partnerLogoImage}
                   src={partner.src}
+                  sizes="(max-width: 900px) 90px, (max-width: 1200px) 110px, 120px"
                   alt={partner.title}
                 />
               ))}
@@ -86,11 +86,22 @@ export const Partner = () => {
                   height={40}
                   className={styles.partnerLogoImage}
                   src={partner.src}
+                  sizes="(max-width: 900px) 90px, (max-width: 1200px) 110px, 120px"
                   alt={partner.title}
                 />
               ))}
             </div>
           </div>
+        </div>
+        <div className={styles.hostGroup}>
+          <Image
+            src="/home/logo/Co-host.png"
+            width={600}
+            height={100}
+            className={styles.hostLogoImage}
+            sizes="(max-width: 900px) 70vw, (max-width: 1200px) 55vw, 600px"
+            alt=""
+          />
         </div>
       </div>
     </section>

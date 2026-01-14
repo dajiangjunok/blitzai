@@ -22,7 +22,12 @@
 
 .hostGroup{
   position: relative;
-  top: -40px;
+  bottom: -40px;
+}
+
+.hostLogoImage {
+  width: clamp(220px, 55vw, 600px);
+  height: auto;
 }
 
 .hostTag {
@@ -53,19 +58,19 @@
   position: absolute;
   height: auto;
   filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.5));
-  width: 220px;
+  width: clamp(120px, 18vw, 220px);
 }
 
 .partnerCharacterLeft {
   left: -8px;
-  bottom: 12px;
-   width: 250px;
+  bottom: 0px;
+  width: clamp(140px, 22vw, 250px);
 }
 
 .partnerCharacterRight {
   right: -8px;
-  bottom: 12px;
-     width: 250px;
+  bottom: 0px;
+  width: clamp(140px, 22vw, 250px);
 }
 
 .partnerCharacterCenterLeft {
@@ -76,7 +81,7 @@
 }
 
 .partnerCharacterCenterRight {
-  width: 310px;
+  width: clamp(160px, 26vw, 310px);
   top: 0;
   transform: translateY(-100%);
   left: 50%;
@@ -133,7 +138,7 @@
 
 .partnerLogoImage {
   height: auto;
-  /* height: 40px; */
+  width: clamp(80px, 10vw, 120px);
   object-fit: contain;
   margin: 0 4px;
 }
