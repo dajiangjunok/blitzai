@@ -60,6 +60,8 @@ export const Partner = () => {
               alt=""
             />
           </div>
+          <span className={styles.partnerSideLeft} aria-hidden="true" />
+          <span className={styles.partnerSideRight} aria-hidden="true" />
           <div className={styles.partnerRow}>
             <span className={styles.partnerLabel}>Technology Partners</span>
             <div className={styles.partnerLogos}>

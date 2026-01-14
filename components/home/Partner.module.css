@@ -111,6 +111,34 @@
   pointer-events: none;
 }
 
+.partnerSideLeft,
+.partnerSideRight {
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 66px;
+  transform: translateY(-50%);
+  background-image: radial-gradient(circle, rgba(201, 182, 255, 0.95) 0 4px, transparent 4.5px),
+    linear-gradient(rgba(201, 182, 255, 0.95), rgba(201, 182, 255, 0.95)),
+    linear-gradient(rgba(201, 182, 255, 0.95), rgba(201, 182, 255, 0.95)),
+    linear-gradient(rgba(201, 182, 255, 0.95), rgba(201, 182, 255, 0.95)),
+    radial-gradient(circle, rgba(201, 182, 255, 0.95) 0 4px, transparent 4.5px);
+  background-repeat: no-repeat;
+  background-size: 8px 8px, 22px 4px, 18px 4px, 22px 4px, 8px 8px;
+  background-position: 50% 0, 50% 28%, 50% 50%, 50% 72%, 50% 100%;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.partnerSideLeft {
+  left: -30px;
+}
+
+.partnerSideRight {
+  right: -30px;
+}
+
 .partnerRow {
   display: flex;
   align-items: center;
@@ -196,5 +224,20 @@
   .partnerCharacterCenterRight {
     width: 110px;
     bottom: 96px;
+  }
+
+  .partnerSideLeft,
+  .partnerSideRight {
+    width: 14px;
+    height: 64px;
+    background-size: 6px 6px, 10px 3px, 14px 3px, 10px 3px, 6px 6px;
+  }
+
+  .partnerSideLeft {
+    left: 12px;
+  }
+
+  .partnerSideRight {
+    right: 12px;
   }
 }
