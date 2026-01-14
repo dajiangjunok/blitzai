@@ -62,13 +62,13 @@
 }
 
 .partnerCharacterLeft {
-  left: -8px;
+  left: -20px;
   bottom: 0px;
-  width: clamp(140px, 22vw, 250px);
+  width: clamp(120px, 22vw, 230px);
 }
 
 .partnerCharacterRight {
-  right: -8px;
+  right: -20px;
   bottom: 0px;
   width: clamp(140px, 22vw, 250px);
 }
