@@ -1,13 +1,15 @@
 "use client"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
-import Link from "next/link"
+
 import Image from 'next/image';
 import { Button } from "antd"
 import { Avatar } from "antd"
 import styles from "./page.module.css"
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { HeroContainer } from "@/components/home/HeroContainer"
+
 
 export default function Home() {
     const [isOpen, setIsOpen] = useState(false)
@@ -138,8 +140,8 @@ export default function Home() {
             <Header />
             <section id="home" className={styles.heroSection}>
                 {/* 背景图片容器 - 使用 next/image */}
-                <div className={styles.heroImageContainer}>
-                    <Image
+                <div className={styles.heroSectionContainer}>
+                    {/* <Image
                         src="/intro.png"
                         alt="Rebel in Paradise AI Hackathon Background"
                         fill
@@ -151,7 +153,8 @@ export default function Home() {
                             objectFit: 'cover',
                             objectPosition: 'center'
                         }}
-                    />
+                    /> */}
+                    <HeroContainer />
                 </div>
             </section>
             {/* About Section */}

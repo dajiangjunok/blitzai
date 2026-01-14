@@ -17,6 +17,11 @@
   background: linear-gradient(to bottom, #0f0f0f, #0f0a15);
 }
 
+/* heroSectionContainer */
+.heroSectionContainer{
+  width: 100%;
+}
+
 /* Added background anime character styles positioned on right side */
 .animeCharBgBlue {
   position: absolute;
