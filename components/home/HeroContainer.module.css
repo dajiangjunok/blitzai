@@ -16,7 +16,7 @@
 .hostRow {
   position: relative;
   left: -300px;
-  margin-top: 2rem;
+  margin-top: 3rem;
   z-index: 2;
   font-size: 14px;
   text-transform: uppercase;
@@ -24,17 +24,7 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-.hostGroup {
-  display: flex;
-  align-items: center;
-  position:relative;
-  top: -18px;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-size: 22px;
-  text-align: left;
 
-}
 
 .hostTag {
   color: #d5c9fb;
@@ -68,7 +58,7 @@
 
 .titleBlock {
   padding: 0 50px;
-  margin-top: 2rem;
+  margin-top: 6rem;
   z-index: 2;
   text-align: center;
     color: #fff;
@@ -91,7 +81,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-top: 4rem;
+  margin-top: 8rem;
   z-index: 2;
 }
 

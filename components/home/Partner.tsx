@@ -5,8 +5,7 @@ import styles from './Partner.module.css'
 
 export const Partner =   () => {
   return (
-    
-    <section>
+    <section className={styles.partner}>
        <div className={styles.partnerArea}>
         <div className={styles.hostGroup}>
           <span className={styles.hostLabel}>Co-host</span>
