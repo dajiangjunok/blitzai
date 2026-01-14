@@ -2,8 +2,10 @@
 .home {
   min-height: 100vh;
   background-color: #0f0f0f;
-  position: relative;
-  background: linear-gradient(to bottom, #0f0f0f 0%, #0f0a15 30%, #0a0a0f 70%, #070710 100%);
+  background-image: url('/home/background/hero.png');
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: repeat-y; /* 只沿纵向重复 */
 }
 
 /* Hero Section */
@@ -14,16 +16,17 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(to bottom, #0f0f0f, #0f0a15);
+   
+ 
 }
 
 /* heroSectionContainer */
-.heroSectionContainer{
+.heroSectionContainer {
   width: 100%;
 }
 
 /* partnerContainer */
-.partnerContainer{
+.partnerContainer {
   width: 100%;
   margin-top: 10rem;
   margin-bottom: 3rem;
@@ -134,7 +137,12 @@
   left: 25%;
   width: 384px;
   height: 384px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.3), rgba(139, 92, 246, 0.2), transparent);
+  background: radial-gradient(
+    circle,
+    rgba(168, 85, 247, 0.3),
+    rgba(139, 92, 246, 0.2),
+    transparent
+  );
   border-radius: 50%;
   filter: blur(80px);
   animation: pulseSlow 8s ease-in-out infinite;
@@ -146,7 +154,12 @@
   right: 25%;
   width: 320px;
   height: 320px;
-  background: radial-gradient(circle, rgba(236, 72, 153, 0.3), rgba(219, 39, 119, 0.2), transparent);
+  background: radial-gradient(
+    circle,
+    rgba(236, 72, 153, 0.3),
+    rgba(219, 39, 119, 0.2),
+    transparent
+  );
   border-radius: 50%;
   filter: blur(80px);
   animation: floatSlow 10s ease-in-out infinite;
@@ -158,7 +171,12 @@
   right: 33.333%;
   width: 288px;
   height: 288px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.15), transparent);
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.25),
+    rgba(37, 99, 235, 0.15),
+    transparent
+  );
   border-radius: 50%;
   filter: blur(80px);
   animation: floatReverse 12s ease-in-out infinite;
@@ -167,7 +185,10 @@
 .gridPattern {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(139, 92, 246, 0.08) 1px, transparent 1px),
+  background-image: linear-gradient(
+      rgba(139, 92, 246, 0.08) 1px,
+      transparent 1px
+    ),
     linear-gradient(90deg, rgba(139, 92, 246, 0.08) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 1;
@@ -177,9 +198,12 @@
   position: absolute;
   inset: 0;
   background-image: radial-gradient(2px 2px at 20% 30%, white, transparent),
-    radial-gradient(2px 2px at 60% 70%, white, transparent), radial-gradient(1px 1px at 50% 50%, white, transparent),
-    radial-gradient(1px 1px at 80% 10%, white, transparent), radial-gradient(2px 2px at 90% 60%, white, transparent),
-    radial-gradient(1px 1px at 33% 90%, white, transparent), radial-gradient(1px 1px at 15% 75%, white, transparent);
+    radial-gradient(2px 2px at 60% 70%, white, transparent),
+    radial-gradient(1px 1px at 50% 50%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 90% 60%, white, transparent),
+    radial-gradient(1px 1px at 33% 90%, white, transparent),
+    radial-gradient(1px 1px at 15% 75%, white, transparent);
   background-size: 200% 200%;
   animation: sparkle 8s ease-in-out infinite;
   z-index: 2;
@@ -201,7 +225,12 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.8), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(168, 85, 247, 0.8),
+    transparent
+  );
   animation: floatSlow 8s ease-in-out infinite;
   z-index: 3;
 }
@@ -212,7 +241,12 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.6), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(59, 130, 246, 0.6),
+    transparent
+  );
   animation: floatReverse 10s ease-in-out infinite;
   z-index: 3;
 }
@@ -223,7 +257,12 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(236, 72, 153, 0.6), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(236, 72, 153, 0.6),
+    transparent
+  );
   animation: floatSlow 9s ease-in-out infinite;
   z-index: 3;
 }
@@ -234,7 +273,12 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.7), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(168, 85, 247, 0.7),
+    transparent
+  );
   animation: floatReverse 11s ease-in-out infinite;
   z-index: 3;
 }
@@ -245,7 +289,12 @@
   bottom: 0;
   left: 15%;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(168, 85, 247, 0.5), transparent);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(168, 85, 247, 0.5),
+    transparent
+  );
   animation: floatVertical 7s ease-in-out infinite;
   z-index: 3;
 }
@@ -256,7 +305,12 @@
   bottom: 0;
   left: 45%;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.4), transparent);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(59, 130, 246, 0.4),
+    transparent
+  );
   animation: floatVerticalReverse 9s ease-in-out infinite;
   z-index: 3;
 }
@@ -267,7 +321,12 @@
   bottom: 0;
   right: 20%;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(236, 72, 153, 0.4), transparent);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(236, 72, 153, 0.4),
+    transparent
+  );
   animation: floatVertical 8s ease-in-out infinite;
   z-index: 3;
 }
@@ -368,9 +427,7 @@
 
 /* About Section */
 .aboutSection {
-  padding: 8rem 0;
-  position: relative;
-  background: linear-gradient(to bottom, #0f0f0f, #0a0a0f);
+  position: relative; 
 }
 
 .aboutTitle {
@@ -393,7 +450,7 @@
 
 .featuresGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* 改为4列 */
+  grid-template-columns: repeat(4, 1fr); /* 改为4列 */
   gap: 2rem;
   max-width: 1152px;
   margin: 0 auto;
@@ -414,7 +471,6 @@
 /* Agenda Section */
 .agendaSection {
   padding: 8rem 0 10rem;
-  background: #0a0a0f;
 }
 
 .agendaTitle {
@@ -442,7 +498,11 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.15),
+    rgba(236, 72, 153, 0.1)
+  );
   border-color: rgba(168, 85, 247, 0.4);
   box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
 }
@@ -538,8 +598,7 @@
 
 /* Prizes Section */
 .prizesSection {
-  padding: 8rem 0 10rem;
-  background: linear-gradient(to bottom, #0a0a0f, #0f0a15);
+  padding: 8rem 0 10rem; 
 }
 
 .prizesTitle {
@@ -557,14 +616,22 @@
 
 .prizeCard {
   padding: 2.5rem;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(168, 85, 247, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.15),
+    rgba(168, 85, 247, 0.1)
+  );
   border-radius: 1.5rem;
   border: 1px solid rgba(168, 85, 247, 0.3);
   backdrop-filter: blur(10px);
 }
 
 .resourceCard {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.15),
+    rgba(139, 92, 246, 0.1)
+  );
   border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
@@ -661,19 +728,27 @@
   padding: 8rem 0 10rem;
   position: relative;
   overflow: hidden;
-  background: #0a0a0f;
 }
 
 .gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(139, 92, 246, 0.2), rgba(168, 85, 247, 0.1), transparent);
+  background: linear-gradient(
+    to top,
+    rgba(139, 92, 246, 0.2),
+    rgba(168, 85, 247, 0.1),
+    transparent
+  );
 }
 
 .dots {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(168, 85, 247, 0.3) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(168, 85, 247, 0.3) 1px,
+    transparent 1px
+  );
   background-size: 40px 40px;
   opacity: 0.3;
 }
@@ -684,7 +759,12 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(168, 85, 247, 0.8), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(168, 85, 247, 0.8),
+    transparent
+  );
   opacity: 0.8;
 }
 
@@ -795,10 +875,6 @@
 
   .heroDate {
     font-size: 1.25rem;
-  }
-
-  .aboutSection {
-    padding: 10rem 0;
   }
 
   .aboutTitle {

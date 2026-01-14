@@ -178,11 +178,12 @@ export default function Home() {
           <HeroContainer />
         </div>
       </section>
-      <section id="partner" className={styles.partnerContainer}>
-          <Partner />
-      </section>
+
       {/* About Section */}
       <section id="about" className={styles.aboutSection}>
+        <section className={styles.partnerContainer}>
+          <Partner />
+        </section>
         <div className={styles.container}>
           <div className={styles.headerContent}>
             <h2 className={styles.aboutTitle}>
