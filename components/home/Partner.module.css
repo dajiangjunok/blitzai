@@ -1,6 +1,6 @@
 .partner {
   position: relative;
-  padding: 0 3rem 8rem;
+  padding: 0 3rem 14rem;
 }
 
 .partnerArea {
@@ -318,15 +318,15 @@
 
 @media (min-width: 1920px) {
   .partner {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }
 
 @media (min-width: 2560px) {
   .partner {
-    padding-left: 18rem;
-    padding-right: 18rem;
+    padding-left: 16rem;
+    padding-right: 16rem;
   }
 }
 
