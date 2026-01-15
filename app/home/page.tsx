@@ -205,6 +205,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Register Section */}
+      <section id="register" className={styles.registerSection}>
+        <div className={styles.container}>
+          <div className={styles.registerHeader}>
+            <h2 className={styles.registerTitle}>
+              Register <span className={styles.accent}>Timeline</span>
+            </h2>
+            <p className={styles.registerSubtitle}>
+              Online Phase + Offline Hacker Camp
+            </p>
+          </div>
+
+          <div className={styles.registerGrid}>
+            <div className={styles.registerCard}>
+              <div className={styles.registerLabel}>Online Phase</div>
+              <div className={styles.registerDate}>Jan 19 - Feb 28</div>
+              <p className={styles.registerDescription}>
+                Full-cycle technical mentoring and project incubation
+              </p>
+            </div>
+
+            <div className={styles.registerCard}>
+              <div className={styles.registerLabel}>Offline Hacker Camp</div>
+              <div className={styles.registerDate}>Beijing: Jan 31</div>
+              <div className={styles.registerDate}>Shenzhen: Feb 7</div>
+            </div>
+          </div>
+
+          <div className={styles.registerNote}>
+            <p>
+              The offline events bring together top mentors, technical experts,
+              and innovative teams. Through workshops, hands-on drills, and deep
+              exchanges, we explore the latest trends and real-world
+              applications of agent technology. The online phase provides
+              ongoing technical guidance and resources to support projects from
+              concept to launch.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Agenda Section */}
       <section id="agenda" className={styles.agendaSection}>
         <div className={styles.container}>
