@@ -22,10 +22,6 @@ export default function Home() {
 
   const features = [
     {
-      title: '40-50 Projects',
-      description: 'Expected submissions, with 10 teams advancing to Demo Day'
-    },
-    {
       title: 'USD $40,000',
       description:
         'Total prize pool: $20K cash + $20K in creative & resource rewards'
@@ -214,11 +210,10 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.agendaHeader}>
             <h2 className={styles.agendaTitle}>
-              Beijing Hacker Camp <span className={styles.accent}>Agenda</span>
+              Hacker Camp <span className={styles.accent}>Agenda</span>
             </h2>
             <p className={styles.agendaSubtitle}>
-              January 31, 2026 • Beijing • Full-day event with workshops,
-              panels, and networking
+              Full-day event with workshops, panels, and networking
             </p>
           </div>
 

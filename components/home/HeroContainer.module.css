@@ -21,7 +21,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: rgba(255, 255, 255, 0.7);
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
 }
 
 .hostLogoOutline {
@@ -97,7 +97,7 @@
   .titleBlock {
     flex: 0 1 auto;
     justify-content: flex-start;
-    padding-top: 6rem;
+    padding-top: 4rem;
   }
 
   .subtitleRow {

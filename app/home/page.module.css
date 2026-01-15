@@ -448,8 +448,8 @@
 
 .featuresGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 改为4列 */
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr); /* 改为3列 */
+  gap: 6rem;
   max-width: 1152px;
   margin: 0 auto;
 }
@@ -898,7 +898,7 @@
   }
 
   .featuresGrid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
