@@ -7,12 +7,12 @@ export const HeroContainer = () => {
     <section className={styles.hero}>
       <div className={styles.hostRow}>
         <div className={styles.hostGroup}>
-          <Image
+          {/* <Image
             width={600}
             height={50}
             src="/home/logo/hero_logo.png"
             alt=""
-          ></Image>
+          ></Image> */}
         </div>
       </div>
 
@@ -46,8 +46,6 @@ export const HeroContainer = () => {
           </div>
         </div>
       </div>
-
-     
     </section>
   )
 }

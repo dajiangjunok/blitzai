@@ -31,15 +31,15 @@ export function Header() {
             <div className={styles.navContainer}>
                 <div className={styles.navWrapper}>
                     <Link href="/" className={styles.logo}>
-                        <div className={styles.logoIcon}>
+                     
                             <Image
                                 src="/logo.png"
                                 alt="MONAD Logo"
-                                width={48}
-                                height={48}
+                                width={300}
+                                height={300}
                             />
-                        </div>
-                        <span className={styles.logoText}>MONAD</span>
+         
+                
                     </Link>
 
                     <div className={styles.desktopNav}>
