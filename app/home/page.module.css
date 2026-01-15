@@ -13,11 +13,9 @@
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   overflow: hidden;
-   
- 
 }
 
 /* heroSectionContainer */
@@ -427,7 +425,7 @@
 
 /* About Section */
 .aboutSection {
-  position: relative; 
+  position: relative;
 }
 
 .aboutTitle {
@@ -598,7 +596,7 @@
 
 /* Prizes Section */
 .prizesSection {
-  padding: 8rem 0 10rem; 
+  padding: 8rem 0 10rem;
 }
 
 .prizesTitle {

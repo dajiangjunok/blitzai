@@ -46,8 +46,6 @@ export const HeroContainer = () => {
           </div>
         </div>
       </div>
-
-     
     </section>
   )
 }
