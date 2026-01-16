@@ -138,7 +138,7 @@ export const Partner = () => {
             width={600}
             height={100}
             className={styles.hostLogoImage}
-            sizes="(max-width: 900px) 70vw, (max-width: 1200px) 55vw, 600px"
+            sizes="(max-width: 900px) 70vw, (max-width: 1200px) 55vw, 540px"
             alt=""
           />
         </div>

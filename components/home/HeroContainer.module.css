@@ -8,6 +8,7 @@
   width: 100%;
   padding: 0px 6vw 32px;
   color: #f5f5f7;
+  padding-bottom: 12rem;
 }
 
 .hostRow {
@@ -52,7 +53,7 @@
 .title {
   position: relative;
   display: inline-block;
-  font-family: "Satoshi", system-ui, sans-serif;
+  font-family: 'Satoshi', system-ui, sans-serif;
   font-size: clamp(4.75rem, 8.5vw, 11rem);
   line-height: 1;
   font-weight: 800;

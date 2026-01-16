@@ -452,7 +452,7 @@
 
 /* Register Section */
 .registerSection {
-  padding: 20rem 0 12rem;
+  padding: 12rem 0 12rem;
 }
 
 .registerContent {
@@ -475,7 +475,7 @@
 
 /* Agenda Section */
 .agendaSection {
-  padding: 8rem 0 10rem;
+  padding: 0rem 0 10rem;
 }
 
 .agendaTitle {
@@ -489,6 +489,29 @@
 .agendaSubtitle {
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.8);
+}
+
+.agendaActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto 3rem;
+  flex-wrap: wrap;
+}
+
+.agendaButton {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
+  border: none !important;
+  height: 2.75rem !important;
+  padding: 0 1.75rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.95rem !important;
+  box-shadow: 0 4px 18px rgba(168, 85, 247, 0.35) !important;
+}
+
+.agendaButton:hover {
+  background: linear-gradient(135deg, #7c3aed, #9333ea) !important;
+  box-shadow: 0 6px 24px rgba(168, 85, 247, 0.55) !important;
 }
 
 .agendaItem {
@@ -951,6 +974,15 @@
 
   .agendaTitle {
     font-size: 2.5rem;
+  }
+
+  .agendaActions {
+    margin: 1.5rem auto 2.5rem;
+  }
+
+  .agendaButton {
+    width: 100%;
+    max-width: 240px;
   }
 
   .prizesGrid {
