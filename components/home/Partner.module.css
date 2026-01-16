@@ -163,7 +163,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding-left: 4rem;
 }
 
@@ -199,6 +199,22 @@
 
 .partnerLogosTrackRight {
   animation-name: partner-scroll-right;
+}
+
+.partnerLogoLabel {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.7rem, 0.4vw + 0.6rem, 1rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(201, 182, 255, 0.9);
+  white-space: nowrap;
+  padding: 0 10px;
+}
+
+.partnerLogoLabelLine {
+  line-height: 1.05;
 }
 
 .partnerLogoImage {
