@@ -450,32 +450,9 @@
   line-height: 1.75;
 }
 
-/* Register Section */
-.registerSection {
-  padding: 12rem 0 12rem;
-}
-
-.registerContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.5rem;
-}
-
-.registerText {
-  font-size: 3.2rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.2;
-  max-width: 1300px;
-  text-wrap: balance;
-}
- 
-
 /* Agenda Section */
 .agendaSection {
-  padding: 0rem 0 10rem;
+  padding: 10rem 0 10rem;
 }
 
 .agendaTitle {
@@ -603,30 +580,9 @@
   font-size: 0.875rem;
 }
 
-.note {
-  margin-top: 4rem;
-  max-width: 56rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2rem;
-  background: rgba(139, 92, 246, 0.1);
-  border-radius: 1rem;
-  border: 1px solid rgba(168, 85, 247, 0.3);
-}
-
-.note p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
-}
-
-.noteBold {
-  font-weight: bold;
-  color: #c4b5fd;
-}
-
 /* Prizes Section */
 .prizesSection {
-  padding: 8rem 0 10rem;
+  padding: 0rem 0 10rem;
 }
 
 .prizesTitle {
@@ -826,6 +782,12 @@
   box-shadow: 0 6px 30px rgba(168, 85, 247, 0.6) !important;
 }
 
+.aboutCtaButton {
+  height: 3.5rem !important;
+  padding: 0 2.5rem !important;
+  font-size: 1.125rem !important;
+}
+
 .ctaNote {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.7);
@@ -911,6 +873,7 @@
 
   .aboutDescription {
     font-size: 1.25rem;
+    padding-top: 1.4rem;
   }
 
   .featuresGrid {
