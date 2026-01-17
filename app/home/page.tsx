@@ -101,6 +101,12 @@ export default function Home() {
             <h2 className={styles.aboutTitle}>
               The Variables Are Changing Simultaneously
             </h2>
+            <Button
+              type="primary"
+              className={`${styles.ctaButton} ${styles.aboutCtaButton}`}
+            >
+              Register Now
+            </Button>
             <p className={styles.aboutDescription}>
               In an era where Agents become execution entities and blockchain
               becomes the economic foundation, which directions are most worth
@@ -117,24 +123,6 @@ export default function Home() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Register Section */}
-      <section id="register" className={styles.registerSection}>
-        <div className={styles.container}>
-          <div className={styles.registerContent}>
-            <p className={styles.registerText}>
-              This hackathon adopts an innovative “online mentorship + offline
-              intensive dev camp” model, supporting developers from theory to
-              hands-on building.
-            </p>
-            <div className={styles.buttonWrapper}>
-              <Button type="primary" className={styles.ctaButton}>
-                Register Now
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -168,14 +156,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className={styles.note}>
-            <p>
-              <span className={styles.noteBold}>Note:</span> A similar Hacker
-              Camp will be held on February 7, 2026 in Shenzhen with additional
-              workshops and networking opportunities. Choose the location that
-              works best for you!
-            </p>
-          </div>
+        
         </div>
       </section>
 

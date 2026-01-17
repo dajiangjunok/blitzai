@@ -2,6 +2,10 @@ import Image from 'next/image'
 import styles from './Partner.module.css'
 
 export const Partner = () => {
+  type PartnerItem =
+    | { type: 'label'; text: string }
+    | { type: 'logo'; title: string; src: string }
+
   const technologyPartners = [
     { title: 'KIMI', src: '/home/logo/kimi.png' },
     { title: 'Zhitu', src: '/home/logo/zp.png' },
@@ -21,6 +25,47 @@ export const Partner = () => {
     { title: 'PyChina', src: '/home/logo/pychina.png' },
     { title: 'RTE Dev', src: '/home/logo/kaiyuanshe.png' }
   ]
+
+  const partnerLogos: PartnerItem[] = [
+    { type: 'label', text: 'Technology Partners' },
+    ...technologyPartners.map(partner => ({ type: 'logo' as const, ...partner })),
+    { type: 'label', text: 'Community Support' },
+    ...communitySupporters.map(partner => ({ type: 'logo' as const, ...partner }))
+  ]
+
+  const renderPartnerItem = (
+    item: PartnerItem,
+    suffix: string,
+    isHidden: boolean
+  ) => {
+    if (item.type === 'label') {
+      const [firstLine, ...rest] = item.text.split(' ')
+      const secondLine = rest.join(' ')
+      return (
+        <span
+          key={`${item.text}-${suffix}`}
+          className={styles.partnerLogoLabel}
+          aria-hidden={isHidden}
+        >
+          <span className={styles.partnerLogoLabelLine}>{firstLine}</span>
+          <span className={styles.partnerLogoLabelLine}>{secondLine}</span>
+        </span>
+      )
+    }
+
+    return (
+      <Image
+        key={`${item.title}-${suffix}`}
+        width={120}
+        height={40}
+        className={styles.partnerLogoImage}
+        src={item.src}
+        sizes="(max-width: 900px) 90px, (max-width: 1200px) 110px, 120px"
+        alt={isHidden ? '' : item.title}
+        aria-hidden={isHidden}
+      />
+    )
+  }
 
   return (
     <section className={styles.partner}>
@@ -63,71 +108,10 @@ export const Partner = () => {
           <span className={styles.partnerSideLeft} aria-hidden="true" />
           <span className={styles.partnerSideRight} aria-hidden="true" />
           <div className={styles.partnerRow}>
-            <div  className={styles.partnerLabelContainer}>
-                <p className={styles.partnerLabel}>Technology</p>
-               <p className={styles.partnerLabel}>Partners</p>
-            </div>
-            <div className={styles.partnerLogos}>
-              <div
-                className={`${styles.partnerLogosTrack} ${styles.partnerLogosTrackRight}`}
-              >
-                {technologyPartners.map(partner => (
-                  <Image
-                    key={`${partner.title}-a`}
-                    width={120}
-                    height={40}
-                    className={styles.partnerLogoImage}
-                    src={partner.src}
-                    sizes="(max-width: 900px) 90px, (max-width: 1200px) 110px, 120px"
-                    alt={partner.title}
-                  />
-                ))}
-                {technologyPartners.map(partner => (
-                  <Image
-                    key={`${partner.title}-b`}
-                    width={120}
-                    height={40}
-                    className={styles.partnerLogoImage}
-                    src={partner.src}
-                    sizes="(max-width: 900px) 90px, (max-width: 1200px) 110px, 120px"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className={styles.partnerRow}>
-            
-            <div className={styles.partnerLabelContainer}>
-              <p className={styles.partnerLabel}>Community</p>
-              <p className={styles.partnerLabel}>Support</p>
-            </div>
             <div className={styles.partnerLogos}>
               <div className={styles.partnerLogosTrack}>
-                {communitySupporters.map(partner => (
-                  <Image
-                    key={`${partner.title}-a`}
-                    width={120}
-                    height={40}
-                    className={styles.partnerLogoImage}
-                    src={partner.src}
-                    sizes="(max-width: 900px) 90px, (max-width: 1200px) 110px, 120px"
-                    alt={partner.title}
-                  />
-                ))}
-                {communitySupporters.map(partner => (
-                  <Image
-                    key={`${partner.title}-b`}
-                    width={120}
-                    height={40}
-                    className={styles.partnerLogoImage}
-                    src={partner.src}
-                    sizes="(max-width: 900px) 90px, (max-width: 1200px) 110px, 120px"
-                    alt=""
-                    aria-hidden="true"
-                  />
-                ))}
+                {partnerLogos.map(item => renderPartnerItem(item, 'a', false))}
+                {partnerLogos.map(item => renderPartnerItem(item, 'b', true))}
               </div>
             </div>
           </div>
@@ -138,7 +122,7 @@ export const Partner = () => {
             width={600}
             height={100}
             className={styles.hostLogoImage}
-            sizes="(max-width: 900px) 70vw, (max-width: 1200px) 55vw, 600px"
+            sizes="(max-width: 900px) 70vw, (max-width: 1200px) 55vw, 540px"
             alt=""
           />
         </div>

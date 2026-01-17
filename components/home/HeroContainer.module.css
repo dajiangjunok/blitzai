@@ -8,6 +8,7 @@
   width: 100%;
   padding: 0px 6vw 32px;
   color: #f5f5f7;
+  padding-bottom: 12rem;
 }
 
 .hostRow {
@@ -43,20 +44,43 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   z-index: 2;
   text-align: center;
   color: #fff;
 }
 
 .title {
+  position: relative;
+  display: inline-block;
+  font-family: 'Satoshi', system-ui, sans-serif;
   font-size: clamp(4.75rem, 8.5vw, 11rem);
-  line-height: 1.02;
+  line-height: 1;
   font-weight: 800;
   letter-spacing: 0.04em;
   white-space: nowrap;
-  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.85), 0 6px 0 rgba(16, 16, 20, 0.9),
-    0 18px 32px rgba(0, 0, 0, 0.55), 6px 6px 0 rgba(123, 84, 255, 0.75);
   margin: 0;
+}
+
+.title::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  color: #000;
+  -webkit-text-stroke: 1px #7d498d;
+  z-index: -1;
+}
+
+.title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  color: transparent;
+  -webkit-text-stroke: 1px #7d498d;
+  filter: blur(6px);
+  z-index: -2;
 }
 
 .subtitleRow {
@@ -89,6 +113,22 @@
   height: 28px;
 }
 
+
+.ctaButton {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
+  border: none !important;
+  height: 3rem !important;
+  padding: 0 2rem !important;
+  border-radius: 9999px !important;
+  font-size: 1rem !important;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.4) !important;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(135deg, #7c3aed, #9333ea) !important;
+  box-shadow: 0 6px 30px rgba(168, 85, 247, 0.6) !important;
+}
+
 @media (min-width: 1600px) {
   .hero {
     padding-top: 20px;
@@ -97,12 +137,12 @@
   .titleBlock {
     flex: 0 1 auto;
     justify-content: flex-start;
-    padding-top: 4rem;
+    padding-top: 1rem;
   }
 
   .subtitleRow {
     flex: 0 0 auto;
-    margin-top: 8rem;
+    margin-top: 4rem;
   }
 }
 
