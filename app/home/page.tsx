@@ -281,14 +281,32 @@ export default function Home() {
               Join developers and innovators from around the world to build the
               future. Limited spots available, first come first served.
             </p>
-            <div className={styles.buttonWrapper}>
-              <Button type="primary" size="large" className={styles.ctaButton}>
-                Register Now
-              </Button>
+            <div className={styles.ctaActions}>
+              <div className={styles.ctaAction}>
+                <div className={styles.buttonWrapper}>
+                  <Button type="primary" size="large" className={styles.ctaButton}>
+                    Register Now
+                  </Button>
+                </div>
+                <p className={styles.ctaNote}>
+                  Register opens Jan 19 00:00 UTC+8
+                </p>
+              </div>
+              <div className={styles.ctaAction}>
+                <div className={styles.buttonWrapper}>
+                  <Button
+                    type="default"
+                    size="large"
+                    className={styles.ctaButtonSecondary}
+                  >
+                    Submit
+                  </Button>
+                </div>
+                <p className={styles.ctaNote}>
+                  Submit closes Feb 28 23:59 UTC+8
+                </p>
+              </div>
             </div>
-            <p className={styles.ctaNote}>
-              Registration closes soon. Seize the opportunity!
-            </p>
           </div>
         </div>
       </section>
