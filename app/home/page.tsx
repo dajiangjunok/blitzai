@@ -32,8 +32,7 @@ export default function Home() {
     },
     {
       title: 'Hybrid Format',
-      description:
-        '1-month mentorship + Beijing/Shenzhen Hacker Camps + Online Demo Day'
+      description: '1-month mentorship + Beijing/Shenzhen Hacker Camps'
     }
   ]
 
@@ -92,12 +91,7 @@ export default function Home() {
             <h2 className={styles.aboutTitle}>
               The Variables Are Changing Simultaneously
             </h2>
-            <Button
-              type="primary"
-              className={`${styles.ctaButton} ${styles.aboutCtaButton}`}
-            >
-              Register Now
-            </Button>
+
             <p className={styles.aboutDescription}>
               In an era where Agents become execution entities and blockchain
               becomes the economic foundation, which directions are most worth
@@ -145,8 +139,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-        
         </div>
       </section>
 
@@ -158,8 +150,8 @@ export default function Home() {
               <span className={styles.accent}>Prizes & Awards</span>
             </h2>
             <p className={styles.prizesSubtitle}>
-              We expect 40-50 project submissions, with 10 teams selected as
-              finalists for the online Demo Day presentation and judging.
+              We expect 40-50 project submissions, with 7 teams selected as
+              award winners.
             </p>
           </div>
 
@@ -168,7 +160,7 @@ export default function Home() {
               <div className={styles.cardContent}>
                 <div>
                   <h3 className={styles.cardTitle}>
-                    Cash Prizes (USD 20,000 Total)
+                    Cash Prizes (USD 20,000)
                   </h3>
                   <p className={styles.cardDescription}>
                     Cash prizes are structured across three tracks, with 1st and
@@ -179,9 +171,10 @@ export default function Home() {
 
                 <div className={styles.prizeDetails}>
                   <div className={styles.prizeRow}>
-                    <span className={styles.prizeLabel}>
-                      Grand Prize (1 team)
-                    </span>
+                    <div className={styles.prizeMeta}>
+                      <span className={styles.prizeLabel}>Grand Prize</span>
+                      <span className={styles.trackBadge}>1 team</span>
+                    </div>
                     <span className={styles.prizeAmount}>$5,000</span>
                   </div>
 
@@ -190,19 +183,25 @@ export default function Home() {
                       Track Awards (per track):
                     </p>
                     <div className={styles.prizeRow}>
-                      <span className={styles.prizeLabel}>
-                        1st Place (3 teams, 1 per track)
-                      </span>
+                      <div className={styles.prizeMeta}>
+                        <span className={styles.prizeLabel}>1st Place</span>
+                        <span className={styles.trackBadge}>
+                          3 teams, 1 per track
+                        </span>
+                      </div>
                       <span className={styles.prizeAmount}>
-                        $3,000 × 3 = $9,000
+                        $3,000 × 3  
                       </span>
                     </div>
                     <div className={styles.prizeRow}>
-                      <span className={styles.prizeLabel}>
-                        2nd Place (3 teams, 1 per track)
-                      </span>
+                      <div className={styles.prizeMeta}>
+                        <span className={styles.prizeLabel}>2nd Place</span>
+                        <span className={styles.trackBadge}>
+                          3 teams, 1 per track
+                        </span>
+                      </div>
                       <span className={styles.prizeAmount}>
-                        $2,000 × 3 = $6,000
+                        $2,000 × 3  
                       </span>
                     </div>
                   </div>
@@ -220,49 +219,35 @@ export default function Home() {
               <div className={styles.cardContent}>
                 <div>
                   <h3 className={styles.cardTitle}>
-                    Creative & Resource Awards (USD 20,000 Value)
+                    Creative & Resource Awards (USD 20,000)
                   </h3>
                   <p className={styles.cardDescription}>
-                    Beyond cash prizes, we collaborate with partners to provide
-                    high-value creative and resource awards to support continued
-                    development, validation, and incubation, including but not
-                    limited to:
+                   Beyond cash prizes, we collaborate with partners to provide high-value creative and resource awards:
                   </p>
                 </div>
 
                 <div className={styles.resourceList}>
-                  <div className={styles.resourceItem}>
-                    <span className={styles.bullet}>•</span>
-                    <div>
-                      <p className={styles.resourceTitle}>
-                        Top Tech Company Access
-                      </p>
-                      <p className={styles.resourceDesc}>
-                        Lab visits, office tours, and internship opportunities
-                        at leading companies like Tencent
-                      </p>
-                    </div>
-                  </div>
+                  
 
                   <div className={styles.resourceItem}>
                     <span className={styles.bullet}>•</span>
                     <p className={styles.resourceText}>
-                      GPU compute resource credits
+                     NVIDIA DGX Spark AI Supercomputer on your desk
+
                     </p>
                   </div>
 
                   <div className={styles.resourceItem}>
                     <span className={styles.bullet}>•</span>
                     <p className={styles.resourceText}>
-                      Hardware prizes including display devices
+                     Free trial credits for cutting-edge models, developer tools, and infrastructure
                     </p>
                   </div>
 
                   <div className={styles.resourceItem}>
                     <span className={styles.bullet}>•</span>
                     <p className={styles.resourceText}>
-                      Free trial credits for cutting-edge models, developer
-                      tools, and infrastructure
+                     Top Tech Company Access including office tours and internships
                     </p>
                   </div>
                 </div>
@@ -296,14 +281,32 @@ export default function Home() {
               Join developers and innovators from around the world to build the
               future. Limited spots available, first come first served.
             </p>
-            <div className={styles.buttonWrapper}>
-              <Button type="primary" size="large" className={styles.ctaButton}>
-                Register Now
-              </Button>
+            <div className={styles.ctaActions}>
+              <div className={styles.ctaAction}>
+                <div className={styles.buttonWrapper}>
+                  <Button type="primary" size="large" className={styles.ctaButton}>
+                    Register Now
+                  </Button>
+                </div>
+                <p className={styles.ctaNote}>
+                  Register opens Jan 19 00:00 UTC+8
+                </p>
+              </div>
+              <div className={styles.ctaAction}>
+                <div className={styles.buttonWrapper}>
+                  <Button
+                    type="default"
+                    size="large"
+                    className={styles.ctaButtonSecondary}
+                  >
+                    Submit
+                  </Button>
+                </div>
+                <p className={styles.ctaNote}>
+                  Submit closes Feb 28 23:59 UTC+8
+                </p>
+              </div>
             </div>
-            <p className={styles.ctaNote}>
-              Registration closes soon. Seize the opportunity!
-            </p>
           </div>
         </div>
       </section>
