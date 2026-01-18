@@ -217,6 +217,7 @@
   color: rgba(201, 182, 255, 0.9);
   white-space: nowrap;
   padding: 0 10px;
+  margin: 0 0 0 40px;
 }
 
 .partnerLogoLabelLine {
@@ -224,8 +225,8 @@
 }
 
 .partnerLogoImage {
-  /* height: clamp(36px, 4.8vw, 60px); */
-  /* width: auto; */
+  height: clamp(36px, 3.8vw, 46px);
+  width: auto;
   object-fit: contain;
   margin: 0 2px;
 }

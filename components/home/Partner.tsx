@@ -15,6 +15,14 @@ export const Partner = () => {
     { title: 'SiliconFlow', src: '/home/logo/siliconflow.svg' }
   ]
 
+  const VC = [
+    { title: 'Delphi Ventures', src: '/home/logo/vc/delphi_ventures.svg' },
+    { title: 'Vertext', src: '/home/logo/vc/vertext.svg' },
+    { title: 'Archetype', src: '/home/logo/vc/archetype.svg' },
+    { title: 'Pantera', src: '/home/logo/vc/pantera.svg' },
+    { title: 'Miracleplus', src: '/home/logo/vc/miracleplus.svg' }
+  ]
+
   const communitySupporters = [
     { title: 'Hackathon Weekly', src: '/home/logo/hackathoonweekly.svg' },
     { title: 'Datawhale', src: '/home/logo/datawhale.svg' },
@@ -29,6 +37,11 @@ export const Partner = () => {
   const partnerLogos: PartnerItem[] = [
     { type: 'label', text: 'Technology Partners' },
     ...technologyPartners.map(partner => ({
+      type: 'logo' as const,
+      ...partner
+    })),
+    { type: 'label', text: 'VC', ...VC },
+    ...VC.map(partner => ({
       type: 'logo' as const,
       ...partner
     })),
