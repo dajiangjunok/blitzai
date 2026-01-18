@@ -11,25 +11,49 @@ export const Partner = () => {
     | { type: 'logo'; title: string; src: string; logoHeight?: string }
 
   const technologyPartners = [
-    { title: 'KIMI', src: '/home/logo/kimi.svg', },
-    { title: 'Zhipu', src: '/home/logo/zp.svg' ,logoHeight:'1.8rem'},
-    { title: 'DouBao', src: '/home/logo/doubao.svg' },
-    { title: 'YouWare', src: '/home/logo/youware.svg' }, 
-
+    { title: 'KIMI', src: '/home/logo/kimi.svg', logoHeight: '36px' },
+    { title: 'Zhipu', src: '/home/logo/zp.svg', logoHeight: '30px' },
+    { title: 'DouBao', src: '/home/logo/doubao.svg', logoHeight: '36px' },
+    { title: 'YouWare', src: '/home/logo/youware.svg', logoHeight: '36px' },
     { title: 'StepFun', src: '/home/logo/jieyuexc.svg' },
-    { title: 'Rokid', src: '/home/logo/rokid.svg',logoHeight:'2rem' },
-    { title: 'SiliconFlow', src: '/home/logo/siliconflow.svg' },
-    { title: 'OshwHub', src: '/home/logo/oshwhub.svg' }
+    { title: 'Rokid', src: '/home/logo/rokid.svg', logoHeight: '36px' },
+    {
+      title: 'SiliconFlow',
+      src: '/home/logo/siliconflow.svg',
+      logoHeight: '36px'
+    },
+    { title: 'OshwHub', src: '/home/logo/oshwhub.svg', logoHeight: '36px' }
   ]
 
   const VC = [
-    { title: 'Delphi Ventures', src: '/home/logo/vc/delphi_ventures.svg' },
-    { title: 'Vertext', src: '/home/logo/vc/vertext.svg' },
-    { title: 'Archetype', src: '/home/logo/vc/archetype.svg' ,logoHeight:'2rem'},
-    { title: 'Pantera', src: '/home/logo/vc/pantera.svg',logoHeight:'2rem' },
-    { title: 'CoinFund', src: '/home/logo/vc/coinfund.svg',logoHeight:'1.6rem' },
-    { title: 'EnlightCapital', src: '/home/logo/vc/enlightcapital.svg',logoHeight:'2rem' },
-    { title: 'ZhiYuanCT', src: '/home/logo/vc/zhiyuanct.svg' }
+    {
+      title: 'Delphi Ventures',
+      src: '/home/logo/vc/delphi_ventures.svg',
+      logoHeight: '36px'
+    },
+    { title: 'Vertext', src: '/home/logo/vc/vertext.svg', logoHeight: '36px' },
+    {
+      title: 'Archetype',
+      src: '/home/logo/vc/archetype.svg',
+      logoHeight: '36px'
+    },
+    { title: 'Pantera', src: '/home/logo/vc/pantera.svg', logoHeight: '36px' },
+    {
+      title: 'CoinFund',
+      src: '/home/logo/vc/coinfund.svg',
+      logoHeight: '30px'
+    },
+
+    {
+      title: 'EnlightCapital',
+      src: '/home/logo/vc/enlightcapital.svg',
+      logoHeight: '36px'
+    },
+    {
+      title: 'ZhiYuanCT',
+      src: '/home/logo/vc/zhiyuanct.svg',
+      logoHeight: '36px'
+    }
     // { title: 'Miracleplus', src: '/home/logo/vc/miracleplus.svg' }
   ]
 
@@ -40,11 +64,11 @@ export const Partner = () => {
     { title: 'Epic', src: '/home/logo/epic.svg' },
     { title: 'GuiXingRen', src: '/home/logo/guixingren.svg' },
     { title: 'Hackathon Weekly', src: '/home/logo/hackathoonweekly.svg' },
-    { title: 'RTE', src: '/home/logo/rte.svg',logoHeight:'2rem' },
+    { title: 'RTE', src: '/home/logo/rte.svg', logoHeight: '2rem' },
     { title: 'KaiYuanShe', src: '/home/logo/kaiyuanshe.svg' },
     { title: 'MoonBit', src: '/home/logo/moonbit.svg' },
     { title: 'PyChina', src: '/home/logo/pychina.svg' },
-    { title: 'QingKe', src: '/home/logo/qingke.svg' ,logoHeight:'2rem'},
+    { title: 'QingKe', src: '/home/logo/qingke.svg', logoHeight: '2rem' },
     { title: 'Rust.cc', src: '/home/logo/rustcc.svg' },
     { title: 'WaytoAGI', src: '/home/logo/waytoAGI.svg' }
   ]
