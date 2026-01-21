@@ -130,8 +130,12 @@
 
 @media (max-width: 768px) {
   .footerGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
   }
 }
 
