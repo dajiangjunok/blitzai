@@ -27,7 +27,8 @@ export function Header() {
 
   const languageItems: MenuProps['items'] = [
     { key: 'en', label: t('English') },
-    { key: 'zh-CN', label: t('简体中文') }
+    { key: 'zh-CN', label: t('简体中文') },
+    { key: 'zh-TW', label: t('繁體中文') }
   ]
 
   const navItems = [
