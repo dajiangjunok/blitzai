@@ -10,7 +10,7 @@ import { useTranslation } from '@/lib/i18n'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const { t, i18n } = useTranslation() 
+  const { t, i18n } = useTranslation()
 
   const handleLanguageChange = (next: string) => {
     if (i18n.language !== next) {
@@ -89,18 +89,30 @@ export function Header() {
                 <Globe className={styles.languageIcon} aria-hidden="true" />
               </Dropdown>
             </div>
-          
           </div>
 
           <button
             className={styles.mobileMenuButton}
-            onClick={() => setIsOpen(!isOpen)}
             aria-label={t('nav.toggleMenu')}
           >
             {isOpen ? (
-              <X className={styles.menuIcon} />
+              <X
+                className={styles.menuIcon}
+                onClick={() => setIsOpen(!isOpen)}
+              />
             ) : (
-              <Menu className={styles.menuIcon} />
+              <div className="flex items-center">
+                <Dropdown
+                  menu={{
+                    items: languageItems,
+                    onClick: ({ key }) => handleLanguageChange(key)
+                  }}
+                  trigger={['click']}
+                >
+                  <Globe className={`pr-1 w-6 text-white`} aria-hidden="true" />
+                </Dropdown>
+                <Menu className={styles.menuIcon}  onClick={() => setIsOpen(!isOpen)} />
+              </div>
             )}
           </button>
         </div>
@@ -117,18 +129,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-           
-            <div className={styles.languageSelectWrapper}>
-              <Dropdown
-                menu={{
-                  items: languageItems,
-                  onClick: ({ key }) => handleLanguageChange(key)
-                }}
-                trigger={['click']}
-              >
-                <Globe className={styles.languageIcon} aria-hidden="true" />
-              </Dropdown>
-            </div>
           </div>
         )}
       </div>
