@@ -193,8 +193,7 @@
 @media (max-width: 640px) {
   .hero {
     height: calc(100svh - 88px);
-    padding: 0 1.25rem 15rem;
-    padding-bottom: 9rem;
+    padding: 0 1.25rem 20rem;
   }
 
   .hostRow {

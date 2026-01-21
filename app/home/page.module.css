@@ -30,6 +30,14 @@
   margin-bottom: 3rem;
 }
 
+.partnerDesktop {
+  display: block;
+}
+
+.partnerMobile {
+  display: none;
+}
+
 /* Added background anime character styles positioned on right side */
 .animeCharBgBlue {
   position: absolute;
@@ -1002,6 +1010,14 @@
 
   .partnerLogos {
     justify-content: center;
+  }
+
+  .partnerDesktop {
+    display: none;
+  }
+
+  .partnerMobile {
+    display: block;
   }
 
   .agendaItem {

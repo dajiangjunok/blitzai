@@ -10,8 +10,7 @@ import { useTranslation } from '@/lib/i18n'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const { t, i18n } = useTranslation()
-  const isZh = i18n.language?.toLowerCase().startsWith('zh')
+  const { t, i18n } = useTranslation() 
 
   const handleLanguageChange = (next: string) => {
     if (i18n.language !== next) {
