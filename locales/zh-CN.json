@@ -82,8 +82,8 @@
     "title": "赛道",
     "titleAccent": "哪些方向值得探索",
     "subtitle": "选择赛道，构建未来",
-    "sectionProblems": "本赛道希望解决的问题：",
-    "sectionBuilds": "我们希望看到的构建：",
+    "sectionProblems": "本赛道希望解决的问题（可选之一）：",
+    "sectionBuilds": "我们希望看到的构建（可选之一）：",
     "tracks": {
       "track1": {
         "title": "赛道 1：原生智能体支付与基础设施",

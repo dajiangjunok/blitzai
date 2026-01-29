@@ -82,8 +82,8 @@
     "title": "Tracks",
     "titleAccent": "Which Directions Are Worth Exploring",
     "subtitle": "Choose a track and build the future",
-    "sectionProblems": "Problems this track aims to solve:",
-    "sectionBuilds": "What we hope to see built:",
+    "sectionProblems": "Problems this track aims to solve (one optional choice):",
+    "sectionBuilds": "What we hope to see built(one optional choice):",
     "tracks": {
       "track1": {
         "title": "Track 1: Agent-native Payments & Infrastructure",
