@@ -67,8 +67,7 @@ export default function Home() {
     {
       question: t('faq.items.q4'),
       answer: t('faq.items.a4')
-    },
-    
+    }
   ]
 
   return (
@@ -94,13 +93,9 @@ export default function Home() {
         </section>
         <div className={styles.container}>
           <div className={styles.headerContent}>
-            <h2 className={styles.aboutTitle}>
-              {t('about.title')}
-            </h2>
+            <h2 className={styles.aboutTitle}>{t('about.title')}</h2>
 
-            <p className={styles.aboutDescription}>
-              {t('about.description')}
-            </p>
+            <p className={styles.aboutDescription}>{t('about.description')}</p>
           </div>
 
           <div className={styles.featuresGrid}>
@@ -124,9 +119,7 @@ export default function Home() {
               {t('agenda.titleLead')}{' '}
               <span className={styles.accent}>{t('agenda.titleAccent')}</span>
             </h2>
-            <p className={styles.agendaSubtitle}>
-              {t('agenda.subtitle')}
-            </p>
+            <p className={styles.agendaSubtitle}>{t('agenda.subtitle')}</p>
           </div>
           <div className={styles.agendaActions}>
             <a
@@ -169,9 +162,7 @@ export default function Home() {
             <h2 className={styles.prizesTitle}>
               <span className={styles.accent}>{t('prizes.title')}</span>
             </h2>
-            <p className={styles.prizesSubtitle}>
-              {t('prizes.subtitle')}
-            </p>
+            <p className={styles.prizesSubtitle}>{t('prizes.subtitle')}</p>
           </div>
 
           <div className={styles.prizesGrid}>
@@ -275,9 +266,7 @@ export default function Home() {
                 </div>
 
                 <div className={styles.resourceNote}>
-                  <p className={styles.noteText}>
-                    {t('prizes.resourceNote')}
-                  </p>
+                  <p className={styles.noteText}>{t('prizes.resourceNote')}</p>
                 </div>
               </div>
             </div>
@@ -286,10 +275,7 @@ export default function Home() {
       </section>
 
       {/* Q&A Section */}
-      <section
-        id="q&a"
-        className="relative overflow-hidden  py-16 text-white"
-      >
+      <section id="q&a" className="relative overflow-hidden  py-16 text-white">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#7c3aed]/30 blur-[120px]" />
           <div className="absolute right-12 top-24 h-56 w-56 rounded-full bg-[#c084fc]/25 blur-[110px]" />
@@ -344,9 +330,7 @@ export default function Home() {
               <br />
               <span className={styles.accent}>{t('cta.titleLine2')}</span>
             </h2>
-            <p className={styles.ctaSubtitle}>
-              {t('cta.subtitle')}
-            </p>
+            <p className={styles.ctaSubtitle}>{t('cta.subtitle')}</p>
             <div className={styles.ctaActions}>
               <div className={styles.ctaAction}>
                 <div className={styles.buttonWrapper}>
@@ -361,9 +345,7 @@ export default function Home() {
                     {t('cta.registerCta')}
                   </Button>
                 </div>
-                <p className={styles.ctaNote}>
-                  {t('cta.registerNote')}
-                </p>
+                <p className={styles.ctaNote}>{t('cta.registerNote')}</p>
               </div>
               <div className={styles.ctaAction}>
                 <div className={styles.buttonWrapper}>
@@ -371,13 +353,14 @@ export default function Home() {
                     type="default"
                     size="large"
                     className={styles.ctaButtonSecondary}
+                    href="https://mojo.devnads.com/events/10"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {t('cta.submitCta')}
                   </Button>
                 </div>
-                <p className={styles.ctaNote}>
-                  {t('cta.submitNote')}
-                </p>
+                <p className={styles.ctaNote}>{t('cta.submitNote')}</p>
               </div>
             </div>
           </div>
