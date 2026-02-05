@@ -673,11 +673,17 @@
 }
 
 .resourceCard {
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.15),
-    rgba(139, 92, 246, 0.1)
-  );
+  background-image: linear-gradient(
+      135deg,
+      rgba(36, 20, 73, 0.55),
+      rgba(139, 92, 246, 0.6)
+    ),
+    /* url('/home/background/nvidia_dgx_spark.png'); */
+    url('/home/background/dgx_spark.png');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
